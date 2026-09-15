@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/supabase_config.dart';
 import '../cubit/auth_cubit.dart';
 import '../cubit/auth_state.dart';
 
@@ -121,22 +120,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       );
                     },
                   ),
-                  if (!SupabaseConfig.isConfigured) ...[
-                    const SizedBox(height: 24),
-                    Card(
-                      color: Colors.orange.shade50,
-                      child: const Padding(
-                        padding: EdgeInsets.all(16),
-                        child: Text(
-                          'Supabase is not configured.\n'
-                          'Run with:\n'
-                          '--dart-define=SUPABASE_URL=...\n'
-                          '--dart-define=SUPABASE_ANON_KEY=...',
-                          style: TextStyle(fontSize: 12),
-                        ),
-                      ),
-                    ),
-                  ],
                 ],
               ),
             ),
