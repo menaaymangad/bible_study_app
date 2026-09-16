@@ -2,29 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../auth/cubit/auth_cubit.dart';
-
-class StudentShell extends StatelessWidget {
-  const StudentShell({super.key});
+class StudentShell extends StatefulWidget {
+  const new({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final profile =
-        context.select((AuthCubit c) => c.state.profile);
+  State<MyWidget> createState() => _MyWidgetState();
+}
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Student - ${profile?.name ?? ''}'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.logout),
-            tooltip: 'Logout',
-            onPressed: () => context.read<AuthCubit>().signOut(),
-          ),
-        ],
-      ),
-      body: const Center(
-        child: Text('Student dashboard — coming soon.'),
-      ),
-    );
+class _MyWidgetState extends State<MyWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }

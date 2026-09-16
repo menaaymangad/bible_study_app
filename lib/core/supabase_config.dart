@@ -7,7 +7,6 @@ String usernameToEmail(String username) => '$username@$kUsernameEmailDomain';
 class SupabaseConfig {
   SupabaseConfig._();
 
-  // TODO: Replace with your real Supabase project values.
-  static const String url = '';
-  static const String anonKey = '';
-}
+static const String url = 'https://zjqibpvzxihdadogihvu.supabase.co';
+  static const String anonKey =
+      'sb_publishable_LuYGyUDgjlmslEBE0KqyWA_XhcHKaw6';}
