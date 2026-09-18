@@ -1,3 +1,5 @@
+import 'package:bible_study_app/core/widgets/app_text.dart';
+import 'package:bible_study_app/core/widgets/auth_text_form_field.dart' show AuthTextFormField;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -35,7 +37,13 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bible School Login')),
+      appBar: AppBar(
+          centerTitle: true,
+        title: const AppText(
+          text:'تسجيل الدخول'),
+        
+        ),
+        
       body: BlocListener<AuthCubit, AuthState>(
         listener: (context, state) {
           if (state.status == AuthStatus.error && state.errorMessage != null) {
@@ -52,16 +60,17 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(Icons.menu_book, size: 64),
+                  Image.asset(
+											'assets/app_icon.jpg',
+											width: 200  ,
+											height: 200,
+											 fit: BoxFit.cover,
+										),
                   const SizedBox(height: 32),
-                  TextFormField(
+                  AuthTextFormField(
                     controller: _usernameController,
-                    decoration: const InputDecoration(
-                      labelText: 'Username',
-                      prefixIcon: Icon(Icons.person),
-                      border: OutlineInputBorder(),
-                    ),
-                    textInputAction: TextInputAction.next,
+                    prefixIcon:Icon(Icons.person,color: Color.fromARGB(255, 1, 44, 34),),
+                   hintText: 'Username',
                     validator: (value) {
                       if (value == null || value.trim().isEmpty) {
                         return 'Please enter your username';
@@ -75,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     obscureText: _obscurePassword,
                     decoration: InputDecoration(
                       labelText: 'Password',
-                      prefixIcon: const Icon(Icons.lock),
+                      prefixIcon: const Icon(Icons.lock,color: Color.fromARGB(255, 1, 44, 34),),
                       border: const OutlineInputBorder(),
                       suffixIcon: IconButton(
                         icon: Icon(
@@ -113,9 +122,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                   width: 20,
                                   child: CircularProgressIndicator(
                                     strokeWidth: 2,
+                                    color: Color.fromARGB(255, 1, 44, 34),
                                   ),
                                 )
-                              : const Text('Sign In'),
+                              : const AppText(text:'Sign In',fontSize: 18,),
                         ),
                       );
                     },

@@ -1,3 +1,4 @@
+import 'package:bible_study_app/features/auth/view/splash.dart' show SplashScreen;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,7 +14,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bible School',
+      debugShowCheckedModeBanner: false,
+      title: 'تسجيل الدخول',
       theme: ThemeData(
         colorSchemeSeed: Colors.indigo,
         useMaterial3: true,
@@ -41,13 +43,13 @@ class AuthRouter extends StatelessWidget {
             );
           case AuthStatus.unauthenticated:
           case AuthStatus.error:
-            return const LoginScreen();
+            return const HomeScreen();
           case AuthStatus.authenticated:
             final profile = state.profile!;
             if (profile.isAdmin) {
               return const AdminShell();
             }
-            return const StudentShell();
+            return const HomeScreen();
         }
       },
     );
