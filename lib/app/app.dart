@@ -1,10 +1,8 @@
 import 'package:bible_study_app/features/auth/view/splash.dart' show SplashScreen;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../features/auth/cubit/auth_cubit.dart';
 import '../features/auth/cubit/auth_state.dart';
-import '../features/auth/view/login_screen.dart';
 import '../features/admin/admin_shell.dart';
 import '../features/student/student_shell.dart';
 

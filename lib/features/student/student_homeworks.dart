@@ -3,30 +3,21 @@ import 'package:bible_study_app/core/widgets/app_text.dart';
 import '/core/widgets/Books_card.dart';
 
 
-
 class HomeWork extends StatefulWidget {
   const new({super.key});
-
   @override
   State<HomeWork> createState() => _HomeWorkState();
 }
-
 class _HomeWorkState extends State<HomeWork> {
-
-
   // متغير لتخزين خيار الاختيار من متعدد
   int selectedOption = 0; // 0: ستة أيام, 1: سبعة أيام, 2: ثمانية أيام
-
   // متحكم بحقل النص للإجابة المقالية
   final TextEditingController textAnswerController = TextEditingController();
-
   @override
   void dispose() {
     textAnswerController.dispose();
     super.dispose();
   }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +30,6 @@ class _HomeWorkState extends State<HomeWork> {
           text: 'تفاصيل الواجب',
           fontWeight: FontWeight.bold,
         ),
-        
       ),
       body: SafeArea(
         //this cames from admin addings to the homework data

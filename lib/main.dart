@@ -11,4 +11,4 @@ void main() async {
     publishableKey: SupabaseConfig.anonKey,
   );
   runApp(const App());
-}
+} 

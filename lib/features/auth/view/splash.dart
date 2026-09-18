@@ -8,7 +8,6 @@ class SplashScreen extends StatelessWidget {
 	Widget build(BuildContext context) {
 		return Scaffold(
 			body: Container(
-				
 				child: SafeArea(
 					child: Center(
 						child: Column(
@@ -22,8 +21,8 @@ class SplashScreen extends StatelessWidget {
 									child: 
 										 Image.asset(
 											'assets/app_icon.jpg',
-											width: 400,
-											height: 400,
+											width: 350,
+											height: 350,
 											 fit: BoxFit.cover,
 										),
 									

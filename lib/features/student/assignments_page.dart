@@ -83,7 +83,11 @@ class _HomeworkTile extends StatelessWidget {
 					padding: const EdgeInsets.only(top: 6),
 					child: Text('${homework.subject}\n${homework.status}', style: TextStyle(color: color, height: 1.5)),
 				),
-				trailing: Icon(homework.done ? Icons.done : Icons.chevron_right, color: color),
+				trailing: Icon(
+          homework.done ? Icons.done :
+           Icons.chevron_right, color: color
+          
+           ),
 			),
 		);
 	}

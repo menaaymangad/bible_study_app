@@ -13,9 +13,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   final List<Widget> _pages =  [
+    
   AssignmentsPage(),
   student_book(),  
   StudentHomePage(),
@@ -30,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: _pages,
       ),
       bottomNavigationBar: NavigationBar(
+
         selectedIndex: _selectedIndex,
         onDestinationSelected: (index) {
           setState(() {
@@ -37,7 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
         destinations: const [
-          
           NavigationDestination(
             icon: Icon(Icons.assignment_outlined),
             selectedIcon: Icon(Icons.assignment),
