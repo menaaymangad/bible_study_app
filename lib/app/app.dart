@@ -1,4 +1,3 @@
-import 'package:bible_study_app/features/auth/view/login_screen.dart' show LoginScreen;
 import 'package:bible_study_app/features/auth/view/splash.dart' show SplashScreen;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,7 +41,7 @@ class AuthRouter extends StatelessWidget {
             );
           case AuthStatus.unauthenticated:
           case AuthStatus.error:
-            return const LoginScreen();
+            return const SplashScreen();
           case AuthStatus.authenticated:
             final profile = state.profile!;
             if (profile.isAdmin) {
