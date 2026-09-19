@@ -41,17 +41,17 @@ class _HomeScreenState extends State<HomeScreen> {
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.assignment_outlined),
-            selectedIcon: Icon(Icons.assignment),
+            selectedIcon: Icon(Icons.assignment,color:Color.fromARGB(255, 1, 44, 34) ,),
             label: 'الواجبات',
           ),
           NavigationDestination(
             icon: Icon(Icons.menu_book_outlined),
-            selectedIcon: Icon(Icons.menu_book),
+            selectedIcon: Icon(Icons.menu_book,color:Color.fromARGB(255, 1, 44, 34) ,),
             label: 'الأسفار',
           ),
           NavigationDestination(
             icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home),
+            selectedIcon: Icon(Icons.home,color:Color.fromARGB(255, 1, 44, 34) ,),
             label: 'الرئيسية',
           ),
         ],

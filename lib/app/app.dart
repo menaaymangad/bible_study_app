@@ -41,7 +41,7 @@ class AuthRouter extends StatelessWidget {
             );
           case AuthStatus.unauthenticated:
           case AuthStatus.error:
-            return const HomeScreen();
+            return const SplashScreen();
           case AuthStatus.authenticated:
             final profile = state.profile!;
             if (profile.isAdmin) {

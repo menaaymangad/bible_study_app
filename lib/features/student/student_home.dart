@@ -1,3 +1,4 @@
+import 'package:bible_study_app/features/student/student_homeworks.dart';
 import 'package:flutter/material.dart';
 import '../../core/widgets/app_text.dart';
 import '../../core/widgets/app_base_card.dart';
@@ -13,7 +14,7 @@ class StudentHomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start ,
           children: [
-             const SizedBox(height: 20.0),
+             const SizedBox(height: 60.0),
             AppText(
               text: 'السنة الدراسية 2026/2027 ',
               fontSize: 16,
@@ -121,7 +122,7 @@ class StudentHomePage extends StatelessWidget {
                     children: [
                       TextButton(
                         onPressed: () {
-                          // Handle button press
+                          Navigator.of(context).push(MaterialPageRoute(builder:(context)=>const HomeWork(),));
                         },
                         child:  Container(
                           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -169,9 +170,9 @@ class StudentHomePage extends StatelessWidget {
               ],)
             )
            ),
-            SizedBox(
+            Center(
               child:AppBaseCard(
-              margin: const EdgeInsets.only(top: 20, left: 20,right: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               elevation: 0,
               child: Column(
               children:[
@@ -211,8 +212,8 @@ class StudentHomePage extends StatelessWidget {
                     ),
                     Divider(
                       thickness: 5,
-                      indent: 10,
-                      endIndent: 10,
+                      indent: 5,
+                      endIndent: 5,
                     ),
                     Column(
                       children: [
@@ -236,8 +237,8 @@ class StudentHomePage extends StatelessWidget {
                     ),
                     Divider(
                       thickness: 5,
-                      indent: 10,
-                      endIndent: 10,
+                      indent: 5,
+                      endIndent: 5,
                     ),
                     Column(
                       children: [
@@ -261,8 +262,8 @@ class StudentHomePage extends StatelessWidget {
                     ),
                     Divider(
                       thickness: 5,
-                      indent: 10,
-                      endIndent: 10,
+                      indent: 5,
+                      endIndent: 5,
                     ),
                     Column(
 
@@ -281,8 +282,8 @@ class StudentHomePage extends StatelessWidget {
                     ),
                     Divider(
                       thickness: 5,
-                      indent: 10,
-                      endIndent: 10,
+                      indent: 5,
+                      endIndent: 5,
                     ),
                     Container(
                       height: 40,
