@@ -115,6 +115,20 @@ class _LoginScreenState extends State<LoginScreen> {
                       return SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white, // Button background color
+                            foregroundColor: Colors.white ,// Text and icon color
+                            elevation: 5,  
+                                          // Shadow depth
+                            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                            textStyle: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                                  ),
+                              shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12), // Rounded corners
+                                ),
+                                  ),
                           onPressed: isLoading ? null : _onLogin,
                           child: isLoading
                               ? const SizedBox(
@@ -124,8 +138,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                     strokeWidth: 2,
                                     color: Color.fromARGB(255, 1, 44, 34),
                                   ),
+                                
                                 )
-                              : const AppText(text:'Sign In',fontSize: 18,),
+                              : const AppText(text:'Sign In',fontSize: 18,color: Colors.white,),
                         ),
                       );
                     },
